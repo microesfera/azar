@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio para pikiwiki</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Aprieta el botón mágico para iniciar el azar</h1>
+      <button id="startButton">Iniciar Secuencia</button>
+    </div>
+    <p class="explanation">(para detener y descubrir tu imagen oráculo, chasquea tus dedos o aplaude)</p>
+    <div id="photoContainer">
+      <img id="photo" src="images/image1.jpg" alt="Foto en bucle">
+    </div>
+
+    <!-- Canvas para mostrar el medidor de frecuencias -->
+    <canvas id="frequencyMeter" width="600" height="100"></canvas>
+  </div>
+
+  <!-- Carga el archivo JS externo -->
+  <script src="script.js"></script>
+</body>
+</html>
