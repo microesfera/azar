@@ -1,101 +1,27 @@
-body {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  background: linear-gradient(45deg, #ff6b6b, #ff6b6b, #f7b7a3, #8e44ad);
-  background-size: 600% 600%;
-  animation: gradientBackground 10s ease infinite;
-  margin: 0;
-  padding: 0;
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Azar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Aprieta el botón mágico para iniciar el azar</h1>
+      <button id="startButton">Iniciar Secuencia</button>
+    </div>
+    <p class="explanation">(para detener y descubrir tu imagen oráculo, chasquea tus dedos o aplaude)</p>
+    <div id="photoContainer">
+      <img id="photo" src="images/image1.jpg" alt="Foto en bucle">
+    </div>
 
-@keyframes gradientBackground {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
+    <!-- Canvas para mostrar el medidor de frecuencias -->
+    <canvas id="frequencyMeter" width="600" height="100"></canvas>
+  </div>
 
-.container {
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 10px;
-}
-
-.header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-.explanation {
-  font-size: 14px;
-  color: #666;
-  margin-bottom: 20px;
-}
-
-#startButton {
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  background: linear-gradient(45deg, #4CAF50, #45a049);
-  color: white;
-  border: none;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-#startButton:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
-}
-
-#startButton:active {
-  transform: scale(1.05);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-#photoContainer {
-  width: 100%;
-  max-width: 800px;
-  height: auto;
-  margin: 0 auto 20px auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: transparent;
-  border: none;
-}
-
-#photoContainer img {
-  max-width: 100%;
-  height: auto;
-  object-fit: contain;
-}
-
-canvas {
-  width: 100%;
-  height: auto;
-}
-
-@media (max-width: 600px) {
-  .header h1 {
-    font-size: 1.5em;
-  }
-
-  #startButton {
-    width: 100%;
-  }
-}
-
-button {
-  font-family: inherit;
-}
+  <!-- Carga el archivo JS externo -->
+  <script src="script.js"></script>
+</body>
+</html>
